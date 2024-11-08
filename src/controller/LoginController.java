@@ -75,7 +75,7 @@ public class LoginController {
 		if (account != null && account.getPassword().equals(password) && account.isStatus() == true) {
 			String roleID = account.getRole();
 			if (roleID.equals("manager") ) {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/KoiManagement.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/FarmController.fxml"));
 				Parent root = loader.load();
 				Stage primaryStage = (Stage) txtEmail.getScene().getWindow();
 				primaryStage.setScene(new Scene(root));

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FarmController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0">
+         <children>
+            <MenuBar layoutX="29.0" layoutY="14.0" prefHeight="26.0" prefWidth="332.0">
+               <menus>
+                  <Menu id="home" fx:id="home" mnemonicParsing="false" onAction="#home" text="Home" />
+                  <Menu id="tour" fx:id="tour" mnemonicParsing="false" onAction="#tour" text="Tour" />
+                  <Menu id="koi" fx:id="koi" mnemonicParsing="false" onAction="#koi" text="Koi" />
+                  <Menu id="farm" fx:id="farm" mnemonicParsing="false" onAction="#farm" text="Farm" />
+                  <Menu id="customer" fx:id="customer" mnemonicParsing="false" onAction="#customer" text="Customer" />
+                  <Menu id="employee" fx:id="employee" mnemonicParsing="false" onAction="#employee" text="Employee" />
+               </menus>
+            </MenuBar>
+            <TableView id="tblTour" fx:id="tblFarm" layoutX="12.0" layoutY="280.0" prefHeight="354.0" prefWidth="874.0">
+               <columns>
+                  <TableColumn id="tourID" fx:id="farmId" prefWidth="68.80002021789551" text="FarmID" />
+                  <TableColumn id="tourName" fx:id="farmName" prefWidth="248.79998016357422" text="Farm Name" />
+                  <TableColumn id="tourDuration" fx:id="loc" prefWidth="136.0" text="Location" />
+                  <TableColumn id="tourDescription" fx:id="description" prefWidth="279.199951171875" text="Decripsion" />
+                  <TableColumn id="tourPrice" fx:id="status" prefWidth="139.99993896484375" text="Status" />
+               </columns>
+            </TableView>
+            <Label layoutX="45.0" layoutY="79.0" text="Farm ID" />
+            <TextField id="txtTourID" fx:id="txtFarmId" layoutX="115.0" layoutY="75.0" prefHeight="26.0" prefWidth="302.0" />
+            <TextField id="txtSearch" fx:id="txtSearch" layoutX="517.0" layoutY="14.0" prefHeight="26.0" prefWidth="266.0" promptText="Search with id" />
+            <Button fx:id="btnSearch" layoutX="806.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnSearchOnAct" text="Search" />
+            <Label layoutX="44.0" layoutY="152.0" text="Farm Name" />
+            <Label layoutX="50.0" layoutY="227.0" text="Location" />
+            <TextField id="txtTourName" fx:id="txtName" layoutX="115.0" layoutY="147.0" prefHeight="26.0" prefWidth="302.0" />
+            <TextField id="txtDuration" fx:id="txtLocation" layoutX="115.0" layoutY="222.0" prefHeight="26.0" prefWidth="302.0" />
+            <Label layoutX="497.0" layoutY="79.0" prefHeight="18.0" prefWidth="54.0" text="Decripstion" />
+            <TextField id="txtStartDate" fx:id="txtDescription" layoutX="567.0" layoutY="75.0" prefHeight="26.0" prefWidth="302.0" />
+            <Label layoutX="500.0" layoutY="152.0" text="Status" />
+            <Button fx:id="btnAdd" layoutX="115.0" layoutY="652.0" mnemonicParsing="false" onAction="#btnAddOnAct" prefHeight="26.0" prefWidth="58.0" text="Add" />
+            <Button fx:id="btnUpdate" layoutX="333.0" layoutY="652.0" mnemonicParsing="false" onAction="#btnUpdateOnAct" prefHeight="26.0" prefWidth="58.0" text="Update" />
+            <Button fx:id="btnDelete" layoutX="542.0" layoutY="652.0" mnemonicParsing="false" onAction="#btnDeleteOnAct" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+            <Button fx:id="btnClose" layoutX="703.0" layoutY="652.0" mnemonicParsing="false" onAction="#btnCloseOnAct" prefHeight="26.0" prefWidth="58.0" text="Close" />
+            <ChoiceBox fx:id="choiceStatus" layoutX="567.0" layoutY="148.0" prefHeight="26.0" prefWidth="302.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
