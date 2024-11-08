@@ -133,6 +133,14 @@ public class KoiFishController {
         koiList = FXCollections.observableArrayList(koiDAO.getAllKoiFish());
         tblFish.setItems(koiList);
     }
+    private void showAlert(String title, String header, String content) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
 
     // Hiển thị thông báo
     private void showAlert(String title, String content, Alert.AlertType type) {
@@ -148,6 +156,38 @@ public class KoiFishController {
         txtLenght.setText(String.valueOf(koiFish.getLength()));
         txtWeight.setText(String.valueOf(koiFish.getWeight()));
         txtPrice.setText(String.valueOf(koiFish.getPrice()));
+    }
+    
+    private boolean validateInput() {
+        String errorMessage = "";
+
+        if (txtKoiID.getText() == null || txtKoiID.getText().isEmpty()) {
+            errorMessage += "Koi ID không được để trống.\n";
+        }
+        if (txtName.getText() == null || txtName.getText().isEmpty()) {
+            errorMessage += "Tên cá không được để trống.\n";
+        }
+        if (txtAge.getText() == null || txtAge.getText().isEmpty()) {
+            errorMessage += "Tuổi không được để trống.\n";
+        }
+        if (txtLenght.getText() == null || txtLenght.getText().isEmpty()) {
+            errorMessage += "Chiều dài không được để trống.\n";
+        }
+        if (txtWeight.getText() == null || txtWeight.getText().isEmpty()) {
+            errorMessage += "Cân nặng không được để trống.\n";
+        }
+        if (txtPrice.getText() == null || txtPrice.getText().isEmpty()) {
+            errorMessage += "Giá không được để trống.\n";
+        }
+
+        // Kiểm tra nếu có lỗi
+        if (!errorMessage.isEmpty()) {
+            // Hiển thị thông báo lỗi cho người dùng
+            showAlert("Lỗi nhập liệu", "Vui lòng kiểm tra lại các trường sau:", errorMessage);
+            return false;
+        }
+
+        return true;
     }
 
 	@FXML public void home() {}
