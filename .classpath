@@ -11,46 +11,46 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nguyen Huu Khoan/Downloads/openjfx-21.0.4_windows-x64_bin-sdk/javafx-sdk-21.0.4/lib/javafx.base.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nguyen Huu Khoan/Downloads/openjfx-21.0.4_windows-x64_bin-sdk/javafx-sdk-21.0.4/lib/javafx.controls.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nguyen Huu Khoan/Downloads/openjfx-21.0.4_windows-x64_bin-sdk/javafx-sdk-21.0.4/lib/javafx.fxml.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nguyen Huu Khoan/Downloads/openjfx-21.0.4_windows-x64_bin-sdk/javafx-sdk-21.0.4/lib/javafx.graphics.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nguyen Huu Khoan/Downloads/openjfx-21.0.4_windows-x64_bin-sdk/javafx-sdk-21.0.4/lib/javafx.media.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nguyen Huu Khoan/Downloads/openjfx-21.0.4_windows-x64_bin-sdk/javafx-sdk-21.0.4/lib/javafx.swing.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nguyen Huu Khoan/Downloads/openjfx-21.0.4_windows-x64_bin-sdk/javafx-sdk-21.0.4/lib/javafx.web.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nguyen Huu Khoan/Downloads/openjfx-21.0.4_windows-x64_bin-sdk/javafx-sdk-21.0.4/lib/javafx-swt.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/KoiKingdomHSF301"/>
+	<classpathentry kind="lib" path="D:/FPT/HSF/Program/javafx-sdk-21.0.4/javafx-sdk-21.0.4/lib/javafx.base.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/FPT/HSF/Program/javafx-sdk-21.0.4/javafx-sdk-21.0.4/lib/javafx.controls.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/FPT/HSF/Program/javafx-sdk-21.0.4/javafx-sdk-21.0.4/lib/javafx.fxml.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/FPT/HSF/Program/javafx-sdk-21.0.4/javafx-sdk-21.0.4/lib/javafx.graphics.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/FPT/HSF/Program/javafx-sdk-21.0.4/javafx-sdk-21.0.4/lib/javafx.media.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/FPT/HSF/Program/javafx-sdk-21.0.4/javafx-sdk-21.0.4/lib/javafx.swing.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/FPT/HSF/Program/javafx-sdk-21.0.4/javafx-sdk-21.0.4/lib/javafx.web.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/FPT/HSF/Program/javafx-sdk-21.0.4/javafx-sdk-21.0.4/lib/javafx-swt.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

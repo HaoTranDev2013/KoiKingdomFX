@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KoiFishController">
+	<children>
+		<MenuBar layoutX="29.0" layoutY="14.0" prefHeight="26.0" prefWidth="332.0">
+			<menus>
+				<Menu id="home" fx:id="home" mnemonicParsing="false" onAction="#home" text="Home" />
+				<Menu id="tour" fx:id="tour" mnemonicParsing="false" onAction="#tour" text="Tour" />
+				<Menu id="koi" fx:id="koi" mnemonicParsing="false" onAction="#koi" text="Koi" />
+				<Menu id="farm" fx:id="farm" mnemonicParsing="false" onAction="#farm" text="Farm" />
+				<Menu id="customer" fx:id="customer" mnemonicParsing="false" onAction="#customer" text="Customer" />
+				<Menu id="employee" fx:id="employee" mnemonicParsing="false" onAction="#employee" text="Employee" />
+			</menus>
+		</MenuBar>
+		<TableView id="tblTour" fx:id="tblFish" layoutX="12.0" layoutY="280.0" prefHeight="354.0" prefWidth="874.0">
+			<columns>
+				<TableColumn id="tourID" fx:id="koiID" prefWidth="68.80002021789551" text="Koi ID" />
+				<TableColumn id="tourName" fx:id="fishName" prefWidth="248.79998016357422" text="Name" />
+				<TableColumn id="tourDuration" fx:id="age" prefWidth="90.4000244140625" text="Age" />
+				<TableColumn id="tourDescription" fx:id="lenght" prefWidth="116.80007934570312" text="Lenght" />
+				<TableColumn id="tourPrice" fx:id="weight" prefWidth="113.5999755859375" text="Weight" />
+				<TableColumn id="startDate" fx:id="price" prefWidth="238.39999999999998" text="Price" />
+			</columns>
+		</TableView>
+		<Label layoutX="45.0" layoutY="79.0" text="Koi ID" />
+		<TextField id="txtTourID" fx:id="txtKoiID" layoutX="115.0" layoutY="75.0" prefHeight="26.0" prefWidth="302.0" />
+		<TextField id="txtSearch" fx:id="txtSearch" layoutX="517.0" layoutY="14.0" prefHeight="26.0" prefWidth="266.0" />
+		<Button layoutX="806.0" layoutY="15.0" mnemonicParsing="false" text="Search" />
+		<Label layoutX="44.0" layoutY="152.0" text="Name" />
+		<Label layoutX="50.0" layoutY="227.0" text="Age" />
+		<TextField id="txtTourName" fx:id="txtName" layoutX="115.0" layoutY="147.0" prefHeight="26.0" prefWidth="302.0" />
+		<TextField id="txtDuration" fx:id="txtAge" layoutX="115.0" layoutY="222.0" prefHeight="26.0" prefWidth="302.0" />
+		<Label layoutX="497.0" layoutY="79.0" prefHeight="18.0" prefWidth="54.0" text="Lenght" />
+		<TextField id="txtStartDate" fx:id="txtLenght" layoutX="567.0" layoutY="75.0" prefHeight="26.0" prefWidth="302.0" />
+		<Label layoutX="500.0" layoutY="152.0" text="Weight" />
+		<Label layoutX="500.0" layoutY="226.0" text="Price" />
+		<TextField id="txtEndDate" fx:id="txtWeight" layoutX="567.0" layoutY="147.0" prefHeight="26.0" prefWidth="302.0" />
+		<TextField id="txtImage" fx:id="txtPrice" layoutX="567.0" layoutY="222.0" prefHeight="26.0" prefWidth="302.0" />
+		<Button fx:id="btnAdd" layoutX="115.0" layoutY="652.0" mnemonicParsing="false" onAction="#btnAddOnAct" prefHeight="26.0" prefWidth="58.0" text="Add" />
+		<Button fx:id="btnUpdate" layoutX="333.0" layoutY="652.0" mnemonicParsing="false" onAction="#btnUpdateOnAct" prefHeight="26.0" prefWidth="58.0" text="Update" />
+		<Button fx:id="btnDelete" layoutX="542.0" layoutY="652.0" mnemonicParsing="false" onAction="#btnDeleteOnAct" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+		<Button fx:id="btnClose" layoutX="703.0"  layoutY="652.0" mnemonicParsing="false" onAction="#btnCloseOnAct" prefHeight="26.0" prefWidth="58.0" text="Close" />
+	</children>
+</AnchorPane>
