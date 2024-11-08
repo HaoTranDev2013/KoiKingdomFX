@@ -2,16 +2,25 @@ package controller;
 
 import koikingdom.dao.KoiDAO;
 import koikingdom.pojo.KoiFish;
+
+import java.io.IOException;
+
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 public class KoiFishController {
 
@@ -35,6 +44,8 @@ public class KoiFishController {
     @FXML private Button btnUpdate;
     @FXML private Button btnDelete;
     
+    
+    @FXML private Button menuTour;
     private KoiDAO koiDAO;
     private ObservableList<KoiFish> koiList;
 
@@ -192,7 +203,19 @@ public class KoiFishController {
 
 	@FXML public void home() {}
 
-	@FXML public void tour() {}
+	@FXML public void toTour() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/TourManagement.fxml"));
+            Parent root = loader.load();
+            Stage primaryStage = (Stage) menuTour.getScene().getWindow();
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Tour Management");
+            primaryStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
 
 	@FXML public void koi() {}
 
