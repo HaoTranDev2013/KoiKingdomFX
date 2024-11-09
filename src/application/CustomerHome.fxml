@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerHomeController">
+   <children>
+      <TextField id="txtSearch" fx:id="txtSearch" layoutX="542.0" layoutY="14.0" prefHeight="26.0" prefWidth="266.0" />
+      <Button layoutX="817.0" layoutY="14.0" mnemonicParsing="false" text="Search" />
+      <ButtonBar layoutX="-11.0" layoutY="7.0" prefHeight="40.0" prefWidth="511.0">
+         <buttons>
+            <Button id="menuHome" fx:id="menuHome" minWidth="66.0" mnemonicParsing="false" prefHeight="26.0" text="Home" />
+            <Button id="menuBookingTour" fx:id="menuBookingTour" mnemonicParsing="false" onAction="#toBookingTour" text="Booking tour" />
+            <Button id="menuMyBooking" fx:id="menuMyBooking" layoutX="159.0" layoutY="17.0" mnemonicParsing="false" onAction="#toMyBooking" text="My booking" />
+            <Button id="menuKoi" fx:id="menuKoi" layoutX="244.0" layoutY="17.0" mnemonicParsing="false" onAction="#toKoi" text="Koi" />
+            <Button id="menuFarm" fx:id="menuFarm" layoutX="288.0" layoutY="17.0" minWidth="60.0" mnemonicParsing="false" onAction="#toFarm" prefHeight="26.0" prefWidth="140.0" text="Farm" />
+         </buttons>
+      </ButtonBar>
+      <Label layoutX="190.0" layoutY="117.0" text="Welcome, customer">
+         <font>
+            <Font name="High Tower Text" size="64.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="468.0" fitWidth="651.0" layoutX="125.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@home.jpg" />
+         </image>
+      </ImageView>
+      <Button id="btnLogOut" fx:id="btnLogOut" layoutX="818.0" layoutY="50.0" mnemonicParsing="false" onAction="#logOut" text="LogOut" />
+   </children>
+</AnchorPane>

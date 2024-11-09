@@ -56,12 +56,12 @@
       <Button id="btnClear" fx:id="btnClear" layoutX="780.0" layoutY="248.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="26.0" prefWidth="58.0" text="Clear" />
       <ButtonBar layoutX="-11.0" layoutY="7.0" prefHeight="40.0" prefWidth="511.0">
          <buttons>
-            <Button minWidth="66.0" mnemonicParsing="false" prefHeight="26.0" text="Home" />
+            <Button id="menuHome" fx:id="menuHome" minWidth="66.0" mnemonicParsing="false" onAction="#toHome" prefHeight="26.0" text="Home" />
             <Button id="menuTour" fx:id="menuTour" mnemonicParsing="false" text="Tour" />
             <Button id="menuKoi" fx:id="menuKoi" layoutX="159.0" layoutY="17.0" mnemonicParsing="false" onAction="#toKoi" text="Koi" />
-            <Button layoutX="244.0" layoutY="17.0" mnemonicParsing="false" text="Farm" />
-            <Button layoutX="288.0" layoutY="17.0" minWidth="60.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Customer" />
-            <Button layoutX="373.0" layoutY="17.0" minWidth="60.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Employee" />
+            <Button id="menuFarm" fx:id="menuFarm" layoutX="244.0" layoutY="17.0" mnemonicParsing="false" onAction="#toFarm" text="Farm" />
+            <Button id="menuCustomer" fx:id="menuCustomer" layoutX="288.0" layoutY="17.0" minWidth="60.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Customer" />
+            <Button id="menuEmployee" fx:id="menuEmployee" layoutX="373.0" layoutY="17.0" minWidth="60.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Employee" />
          </buttons>
       </ButtonBar>
 

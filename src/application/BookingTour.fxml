@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookingTourController">
+   <children>
+      <TextField id="txtSearch" fx:id="txtSearch" layoutX="542.0" layoutY="14.0" prefHeight="26.0" prefWidth="266.0" />
+      <Button layoutX="817.0" layoutY="14.0" mnemonicParsing="false" text="Search" />
+      <ButtonBar layoutX="-11.0" layoutY="7.0" prefHeight="40.0" prefWidth="511.0">
+         <buttons>
+            <Button id="menuHome" fx:id="menuHome" minWidth="66.0" mnemonicParsing="false" onAction="#toHome" prefHeight="26.0" text="Home" />
+            <Button id="menuBookingTour" fx:id="menuBookingTour" mnemonicParsing="false" text="Booking tour" />
+            <Button id="menuMyBooking" fx:id="menuMyBooking" layoutX="159.0" layoutY="17.0" mnemonicParsing="false" onAction="#toMyBooking" text="My booking" />
+            <Button id="menuKoi" fx:id="menuKoi" layoutX="244.0" layoutY="17.0" mnemonicParsing="false" onAction="#toKoi" text="Koi" />
+            <Button id="menuFarm" fx:id="menuFarm" layoutX="288.0" layoutY="17.0" minWidth="60.0" mnemonicParsing="false" onAction="#toFarm" prefHeight="26.0" prefWidth="140.0" text="Farm" />
+         </buttons>
+      </ButtonBar>
+      <Label layoutX="190.0" layoutY="117.0">
+         <font>
+            <Font name="High Tower Text" size="64.0" />
+         </font>
+      </Label>
+      <TableView id="tblTour" fx:id="tblTour" layoutX="13.0" layoutY="286.0" prefHeight="354.0" prefWidth="874.0">
+         <columns>
+            <TableColumn id="tourID" fx:id="tourID" prefWidth="75.0" text="TourID" />
+            <TableColumn id="tourName" fx:id="tourName" prefWidth="87.99999237060547" text="TourName" />
+            <TableColumn id="tourDuration" fx:id="tourDuration" prefWidth="62.399993896484375" text="Duration" />
+            <TableColumn id="tourDescription" fx:id="tourDescription" prefWidth="128.0" text="Description" />
+            <TableColumn id="tourPrice" fx:id="tourPrice" prefWidth="72.0" text="TourPrice" />
+            <TableColumn id="startDate" fx:id="startDate" prefWidth="96.00009155273438" text="StartDate" />
+            <TableColumn id="endDate" fx:id="endDate" prefWidth="94.4000244140625" text="EndDate" />
+            <TableColumn id="image" fx:id="image" prefWidth="92.800048828125" text="Image" />
+            <TableColumn id="status" fx:id="status" prefWidth="61.59991455078125" text="Status" />
+            <TableColumn id="departure" fx:id="departure" prefWidth="111.199951171875" text="Departure" />
+         </columns>
+      </TableView>
+      <Label layoutX="45.0" layoutY="118.0" text="Customer ID" />
+      <TextField id="txtCustomerID" fx:id="txtCustomerID" layoutX="159.0" layoutY="114.0" prefHeight="26.0" prefWidth="207.0" />
+      <Label layoutX="45.0" layoutY="151.0" text="Tour ID" />
+      <TextField id="txtTourID" fx:id="txtTourID" layoutX="159.0" layoutY="147.0" prefHeight="26.0" prefWidth="207.0" />
+      <Label layoutX="45.0" layoutY="222.0" prefHeight="18.0" prefWidth="103.0" text="Number of people" />
+      <TextField id="txtNumPeople" fx:id="txtNumPeople" layoutX="159.0" layoutY="218.0" prefHeight="26.0" prefWidth="207.0" />
+      <Button id="btnBookTour" fx:id="btnBookTour" layoutX="228.0" layoutY="252.0" mnemonicParsing="false" onAction="#bookTour" text="Book tour" />
+      <Label layoutX="218.0" layoutY="66.0" text="Book tour">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Label>
+      <Line endX="20.4000244140625" endY="-76.99999237060547" layoutX="429.0" layoutY="162.0" startX="20.4000244140625" startY="89.39999389648438" />
+      <Label layoutX="637.0" layoutY="66.0" text="Confirm">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="475.0" layoutY="118.0" text="Customer ID" />
+      <Label layoutX="475.0" layoutY="151.0" text="Tour ID" />
+      <Label layoutX="475.0" layoutY="184.0" prefHeight="18.0" prefWidth="103.0" text="Number of people" />
+      <TextField id="txtCfCustomerID" fx:id="txtCfCustomerID" layoutX="578.0" layoutY="114.0" prefHeight="26.0" prefWidth="69.0" />
+      <TextField id="txtCfTourID" fx:id="txtCfTourID" layoutX="578.0" layoutY="147.0" prefHeight="26.0" prefWidth="69.0" />
+      <TextField id="txtCfNumPeople" fx:id="txtCfNumPeople" layoutX="578.0" layoutY="180.0" prefHeight="26.0" prefWidth="69.0" />
+      <Label layoutX="683.0" layoutY="118.0" text="Booking date" />
+      <TextField id="txtBookingDate" fx:id="txtBookingDate" layoutX="773.0" layoutY="113.0" prefHeight="26.0" prefWidth="69.0" />
+      <Label layoutX="45.0" layoutY="186.0" text="Unit Price" />
+      <Label layoutX="681.0" layoutY="151.0" text="Total Price" />
+      <TextField id="txtUnitPrice" fx:id="txtUnitPrice" layoutX="159.0" layoutY="179.0" prefHeight="26.0" prefWidth="207.0" />
+      <TextField id="txtTotalPrice" fx:id="txtTotalPrice" layoutX="773.0" layoutY="146.0" prefHeight="26.0" prefWidth="69.0" />
+      <Button id="btnPayment" fx:id="btnPayment" layoutX="640.0" layoutY="231.0" mnemonicParsing="false" onAction="#payment" prefHeight="26.0" prefWidth="69.0" text="Payment" />
+      <Button id="btnLogOut" fx:id="btnLogOut" layoutX="817.0" layoutY="53.0" mnemonicParsing="false" onAction="#logOut" text="LogOut" />
+   </children>
+</AnchorPane>

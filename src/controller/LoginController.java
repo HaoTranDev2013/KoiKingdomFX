@@ -17,6 +17,7 @@ import koikingdom.dao.AccountDAO;
 import koikingdom.pojo.Account;
 import koikingdom.repository.AccountRepo;
 import koikingdom.service.AccountService;
+import session.UserSession;
 
 
 
@@ -71,17 +72,26 @@ public class LoginController {
 		String password = txtPassword.getText();
 
 		Account account = accountservice.login(email, password);
-
+		
 		if (account != null && account.getPassword().equals(password) && account.isStatus() == true) {
+			UserSession.setCurrentAccount(account);
 			String roleID = account.getRole();
 			if (roleID.equals("manager") ) {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/FarmController.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/ManagerHome.fxml"));
 				Parent root = loader.load();
 				Stage primaryStage = (Stage) txtEmail.getScene().getWindow();
 				primaryStage.setScene(new Scene(root));
-				primaryStage.setTitle("KoiKingdom Management");
+				primaryStage.setTitle("KoiKingdom");
 				primaryStage.show();
-			} else {
+			} else if(roleID.equals("customer")) {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/CustomerHome.fxml"));
+				Parent root = loader.load();
+				Stage primaryStage = (Stage) txtEmail.getScene().getWindow();
+				primaryStage.setScene(new Scene(root));
+				primaryStage.setTitle("KoiKingdom");
+				primaryStage.show();
+			} else
+			{
 				showAlert("Login Error","You have no permission to access this function!");
 			}
 		} else {

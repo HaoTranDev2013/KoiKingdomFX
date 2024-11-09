@@ -9,31 +9,58 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="bgSignup" fx:id="bgSignup" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+<AnchorPane id="bgSignup" fx:id="bgSignup" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
    <children>
-      <ImageView fitHeight="267.0" fitWidth="214.0" layoutX="356.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="391.0" fitWidth="273.0" layoutX="555.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo.jpg" />
          </image>
       </ImageView>
       <Label layoutX="136.0" layoutY="67.0" text="SIGN UP">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="43.0" layoutY="129.0" text="Email" />
-      <Label layoutX="43.0" layoutY="165.0" text="Password" />
-      <TextField id="txtEmail" fx:id="txtEmail" layoutX="146.0" layoutY="124.0" prefHeight="26.0" prefWidth="200.0" />
-      <PasswordField id="txtPassword" fx:id="txtPassword" layoutX="146.0" layoutY="160.0" prefHeight="26.0" prefWidth="200.0" />
-      <Button id="btnSignup" fx:id="btnSignup" layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onAction="#SignUpOnAction"  prefHeight="26.0" prefWidth="57.0" text="Sign up" />
-      <Button id="btnLogin" fx:id="btnLogin" layoutX="52.0" layoutY="348.0" mnemonicParsing="false" onAction="#fromSignUpToLogin" prefHeight="26.0" prefWidth="58.0" text="Login" />
-      <Button id="btnClose" fx:id="btnClose" layoutX="498.0" layoutY="352.0" mnemonicParsing="false" onAction="#CancelOnAction" prefHeight="26.0" prefWidth="57.0" text="Close" />
-      <PasswordField id="txtCfPassword" fx:id="txtCfPassword" layoutX="146.0" layoutY="199.0" prefHeight="26.0" prefWidth="200.0" />
-      <Label layoutX="43.0" layoutY="204.0" text="Confirm Password" />
-      <Label layoutX="45.0" layoutY="238.0" prefHeight="18.0" prefWidth="72.0" text="Full Name" />
-      <TextField id="txtFullName" fx:id="txtFullName" layoutX="146.0" layoutY="233.0" prefHeight="26.0" prefWidth="200.0" />
-      <Label layoutX="45.0" layoutY="271.0" prefHeight="18.0" prefWidth="72.0" text="Address" />
-      <TextField id="txtAddress" fx:id="txtAddress" layoutX="146.0" layoutY="267.0" prefHeight="26.0" prefWidth="200.0" />
-      <Label layoutX="126.0" layoutY="356.0" text="Click here to login if you already have account  ?" />
+      <Label layoutX="43.0" layoutY="129.0" text="Email">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="43.0" layoutY="180.0" text="Password">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField id="txtEmail" fx:id="txtEmail" layoutX="211.0" layoutY="125.0" prefHeight="34.0" prefWidth="238.0" />
+      <PasswordField id="txtPassword" fx:id="txtPassword" layoutX="211.0" layoutY="177.0" prefHeight="34.0" prefWidth="238.0" />
+      <Button id="btnSignup" fx:id="btnSignup" layoutX="283.0" layoutY="409.0" mnemonicParsing="false" onAction="#SignUpOnAction" prefHeight="40.0" prefWidth="86.0" text="Sign up">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button id="btnLogin" fx:id="btnLogin" layoutX="43.0" layoutY="489.0" mnemonicParsing="false" onAction="#fromSignUpToLogin" prefHeight="40.0" prefWidth="86.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button id="btnClose" fx:id="btnClose" layoutX="43.0" layoutY="581.0" mnemonicParsing="false" onAction="#CancelOnAction" prefHeight="40.0" prefWidth="86.0" text="Close">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <PasswordField id="txtCfPassword" fx:id="txtCfPassword" layoutX="211.0" layoutY="229.0" prefHeight="34.0" prefWidth="238.0" />
+      <Label layoutX="43.0" layoutY="229.0" text="Confirm Password">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="43.0" layoutY="290.0" prefHeight="27.0" prefWidth="111.0" text="Full Name">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField id="txtFullName" fx:id="txtFullName" layoutX="211.0" layoutY="287.0" prefHeight="34.0" prefWidth="238.0" />
+      <Label layoutX="45.0" layoutY="340.0" prefHeight="18.0" prefWidth="72.0" text="Address">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField id="txtAddress" fx:id="txtAddress" layoutX="211.0" layoutY="337.0" prefHeight="34.0" prefWidth="238.0" />
+      <Label layoutX="171.0" layoutY="495.0" prefHeight="27.0" prefWidth="398.0" text="Click here to login if you already have account  ?">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
    </children>
 </AnchorPane>

@@ -46,6 +46,11 @@ public class KoiFishController {
     
     
     @FXML private Button menuTour;
+    @FXML private Button menuKoi;
+    @FXML private Button menuFarm;
+    @FXML private Button menuCustomer;
+    @FXML private Button menuEmployee;
+    @FXML private Button menuHome;
     private KoiDAO koiDAO;
     private ObservableList<KoiFish> koiList;
 
@@ -210,6 +215,36 @@ public class KoiFishController {
             Stage primaryStage = (Stage) menuTour.getScene().getWindow();
             primaryStage.setScene(new Scene(root));
             primaryStage.setTitle("Tour Management");
+            primaryStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	@FXML
+	public void toFarm() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/FarmController.fxml"));
+            Parent root = loader.load();
+            Stage primaryStage = (Stage) menuFarm.getScene().getWindow();
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Farm Management");
+            primaryStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	@FXML
+	public void toHome() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/ManagerHome.fxml"));
+            Parent root = loader.load();
+            Stage primaryStage = (Stage) menuHome.getScene().getWindow();
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Home");
             primaryStage.show();
             
         } catch (IOException e) {

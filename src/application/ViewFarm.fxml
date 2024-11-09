@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewFarmController">
+   <children>
+      <TextField id="txtSearch" fx:id="txtSearch" layoutX="542.0" layoutY="14.0" prefHeight="26.0" prefWidth="266.0" />
+      <Button layoutX="817.0" layoutY="14.0" mnemonicParsing="false" text="Search" />
+      <ButtonBar layoutX="-11.0" layoutY="7.0" prefHeight="40.0" prefWidth="511.0">
+         <buttons>
+            <Button id="menuHome" fx:id="menuHome" minWidth="66.0" mnemonicParsing="false" onAction="#toHome" prefHeight="26.0" text="Home" />
+            <Button id="menuBookingTour" fx:id="menuBookingTour" mnemonicParsing="false" onAction="#toBookingTour" text="Booking tour" />
+            <Button id="menuMyBooking" fx:id="menuMyBooking" layoutX="159.0" layoutY="17.0" mnemonicParsing="false" onAction="#toMyBooking" text="My booking" />
+            <Button id="menuKoi" fx:id="menuKoi" layoutX="244.0" layoutY="17.0" mnemonicParsing="false" onAction="#toKoi" text="Koi" />
+            <Button id="menuFarm" fx:id="menuFarm" layoutX="288.0" layoutY="17.0" minWidth="60.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Farm" />
+         </buttons>
+      </ButtonBar>
+      <TableView id="tblTour" fx:id="tblFarm" layoutX="22.0" layoutY="73.0" prefHeight="571.0" prefWidth="874.0">
+         <columns>
+            <TableColumn id="farmId" fx:id="farmId" prefWidth="68.80002021789551" text="FarmID" />
+            <TableColumn id="farmName" fx:id="farmName" prefWidth="248.79998016357422" text="Farm Name" />
+            <TableColumn id="loc" fx:id="loc" prefWidth="136.0" text="Location" />
+            <TableColumn id="description" fx:id="description" prefWidth="279.199951171875" text="Decripsion" />
+            <TableColumn id="status" fx:id="status" prefWidth="139.99993896484375" text="Status" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

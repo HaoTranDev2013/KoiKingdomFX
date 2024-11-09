@@ -49,8 +49,12 @@ public class TourManagementController {
 	@FXML
 	private Button btnClear;
 	
-	@FXML
-	private Button menuKoi;
+	@FXML private Button menuTour;
+    @FXML private Button menuKoi;
+    @FXML private Button menuFarm;
+    @FXML private Button menuCustomer;
+    @FXML private Button menuEmployee;
+    @FXML private Button menuHome;
 
 	@FXML
 	private TextField txtTourID;
@@ -320,7 +324,37 @@ public class TourManagementController {
             Parent root = loader.load();
             Stage primaryStage = (Stage) menuKoi.getScene().getWindow();
             primaryStage.setScene(new Scene(root));
-            primaryStage.setTitle("Tour Management");
+            primaryStage.setTitle("Koi Management");
+            primaryStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	@FXML
+	public void toFarm() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/FarmController.fxml"));
+            Parent root = loader.load();
+            Stage primaryStage = (Stage) menuFarm.getScene().getWindow();
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Farm Management");
+            primaryStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	@FXML
+	public void toHome() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/ManagerHome.fxml"));
+            Parent root = loader.load();
+            Stage primaryStage = (Stage) menuHome.getScene().getWindow();
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Home");
             primaryStage.show();
             
         } catch (IOException e) {

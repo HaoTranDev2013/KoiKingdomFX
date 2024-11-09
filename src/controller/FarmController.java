@@ -1,10 +1,16 @@
 package controller;
 
+import java.io.IOException;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import koikingdom.dao.FarmDAO;
 import koikingdom.pojo.Farm;
 
@@ -30,6 +36,14 @@ public class FarmController {
     @FXML private Button btnClose;
     @FXML private TextField txtSearch;
     @FXML private Button btnSearch;
+    
+    @FXML private Button menuTour;
+    @FXML private Button menuKoi;
+    @FXML private Button menuFarm;
+    @FXML private Button menuCustomer;
+    @FXML private Button menuEmployee;
+    @FXML private Button menuHome;
+
 
     private FarmDAO farmDAO = new FarmDAO();
     private ObservableList<Farm> farmList = FXCollections.observableArrayList();
@@ -180,7 +194,49 @@ public class FarmController {
 
 	@FXML public void home() {}
 
-	@FXML public void tour() {}
+	@FXML public void toTour() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/TourManagement.fxml"));
+            Parent root = loader.load();
+            Stage primaryStage = (Stage) menuTour.getScene().getWindow();
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Tour Management");
+            primaryStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	@FXML
+	public void toKoi() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/KoiManagement.fxml"));
+            Parent root = loader.load();
+            Stage primaryStage = (Stage) menuKoi.getScene().getWindow();
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Tour Management");
+            primaryStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	@FXML
+	public void toHome() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../application/ManagerHome.fxml"));
+            Parent root = loader.load();
+            Stage primaryStage = (Stage) menuHome.getScene().getWindow();
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Home");
+            primaryStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
 
 	@FXML public void koi() {}
 
